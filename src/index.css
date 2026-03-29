@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-vanta-black: #050505;
+  --color-vanta-green: #39FF14;
+  --color-vanta-cyan: #00F1FE;
+  --color-vanta-red: #FF3131;
+  --color-vanta-surface: #131313;
+  --color-vanta-surface-low: #0e0e0e;
+  --color-vanta-surface-high: #201f1f;
+}
+
+@layer base {
+  body {
+    @apply bg-vanta-black text-white font-mono selection:bg-vanta-green selection:text-vanta-black;
+    background-image: 
+      linear-gradient(rgba(57, 255, 20, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(57, 255, 20, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@layer components {
+  .crt-overlay {
+    @apply fixed inset-0 pointer-events-none z-50;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+    background-size: 100% 2px, 3px 100%;
+  }
+
+  .clip-hud {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%);
+  }
+
+  .clip-hud-alt {
+    clip-path: polygon(15px 0, 100% 0, 100% 100%, 0 100%, 0 15px);
+  }
+
+  .bracket-tl::before { content: ''; @apply absolute -top-0.5 -left-0.5 w-5 h-5 border-t-2 border-l-2 border-vanta-green; }
+  .bracket-tr::after { content: ''; @apply absolute -top-0.5 -right-0.5 w-5 h-5 border-t-2 border-r-2 border-vanta-green; }
+  .bracket-bl::before { content: ''; @apply absolute -bottom-0.5 -left-0.5 w-5 h-5 border-b-2 border-l-2 border-vanta-green; }
+  .bracket-br::after { content: ''; @apply absolute -bottom-0.5 -right-0.5 w-5 h-5 border-b-2 border-r-2 border-vanta-green; }
+
+  .glow-green {
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+  }
+  
+  .glow-cyan {
+    box-shadow: 0 0 15px rgba(0, 241, 254, 0.3);
+  }
+
+  .terminal-flicker {
+    animation: flicker 0.15s infinite;
+  }
+
+  @keyframes flicker {
+    0% { opacity: 0.98; }
+    50% { opacity: 1; }
+    100% { opacity: 0.99; }
+  }
+
+  .scanning-line {
+    @apply absolute w-full h-0.5 bg-vanta-green/20 z-10 pointer-events-none;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+    animation: scan 4s linear infinite;
+  }
+
+  @keyframes scan {
+    0% { top: 0%; opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { top: 100%; opacity: 0; }
+  }
+}
