@@ -3,6 +3,10 @@ import { motion } from 'motion/react';
 import { useLocation } from 'react-router-dom';
 import { Database, History, ShieldCheck, Eraser, Activity, Network, Lock } from 'lucide-react';
 
+import vantaVaultLogo from '../assets/products/VantaVault.png';
+import vantaAuditLogo from '../assets/products/VantaAudit.png';
+import vantaGuardLogo from '../assets/products/VantaGuard.png';
+import vantaSweepLogo from '../assets/products/VantaSweep.png';
 const PillarCard = ({ pillar, title, subtitle, description, status, icon: Icon, githubUrl, exeUrl }: any) => (
   <motion.div 
     whileHover={{ scale: 1.01 }}
@@ -43,6 +47,7 @@ const PillarCard = ({ pillar, title, subtitle, description, status, icon: Icon, 
     </div>
   </motion.div>
 );
+
 
 export default function StrategicOverview() {
   const { hash } = useLocation();
@@ -125,7 +130,7 @@ export default function StrategicOverview() {
             pillar="PILLAR_01"
             subtitle="PERSISTENCE"
             title="VantaVault"
-            description="The core storage layer. Implements post-quantum encapsulation and full-disk synchronous encryption to treat data as a single, impenetrable volume."
+            description="A Physical-Token based File Encryption Suite. Uses Image based encryption via USB drive."
             status="OPTIMIZED"
             icon={Database}
             githubUrl="https://github.com/aryan1723/VantaBlack"
@@ -135,7 +140,7 @@ export default function StrategicOverview() {
             pillar="PILLAR_02"
             subtitle="TRUST"
             title="VantaAudit"
-            description="Continuous accountability engine. Maps user attribution and performs real-time hash verification to ensure zero-tamper integrity."
+            description="A lightweight, high-performance static analysis tool designed to perform rapid triage on suspicious files. Provides a 'Vanta Threat Score' to identify malicious payloads."
             status="MONITORING"
             icon={History}
             githubUrl="https://github.com/aryan1723/VantaAudit"
@@ -145,7 +150,7 @@ export default function StrategicOverview() {
             pillar="PILLAR_03"
             subtitle="DEFENSE"
             title="VantaGuard"
-            description="Zero-trust access control. Utilizes neural traffic analysis to detect and neutralize extraction attempts before they breach the perimeter."
+            description="A portable, kernel-aware security engine to detect and neutralize ransomware attacks in real-time by monitoring file system events and analyzing data entropy."
             status="ACTIVE_SHIELD"
             icon={ShieldCheck}
             githubUrl="https://github.com/aryan1723/VantaGuard"
@@ -155,12 +160,81 @@ export default function StrategicOverview() {
             pillar="PILLAR_04"
             subtitle="HYGIENE"
             title="VantaSweep"
-            description="Military-grade data erasure. Executes memory purge protocols and metadata scrubbing to ensure zero digital footprint upon session termination."
+            description="A native Windows utility built in Java that securely and permanently shreds files using synchronous binary overwriting. Features a self-extracting native installer."
             status="PURGE_READY"
             icon={Eraser}
             githubUrl="https://github.com/aryan1723/CleanSweep"
             exeUrl="https://github.com/aryan1723/CleanSweep/releases"
           />
+        </div>
+      </section>
+
+      {/* Protocol Identities (Logos) */}
+      <section id="protocol-identities" className="mb-16 md:mb-24">
+        <div className="flex flex-col md:flex-row items-baseline justify-between mb-8 border-b border-vanta-green/10 pb-4 gap-2">
+          <h2 className="font-sans text-lg md:text-xl font-bold tracking-[0.2em] uppercase text-white flex items-center gap-3">
+            <Lock className="text-vanta-cyan" size={20} />
+            Protocol Identities
+          </h2>
+          <span className="text-[10px] font-mono text-vanta-green/40 uppercase tracking-widest">Visual_Signatures_Connected</span>
+        </div>
+        <div className="bg-vanta-surface border border-vanta-green/20 p-8 clip-hud">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-start justify-items-center mt-4">
+            {/* VantaVault */}
+            <div className="flex flex-col items-center gap-4">
+              <motion.div whileHover={{ scale: 1.05 }} className="w-24 h-24 md:w-32 md:h-32 bg-black border border-vanta-green/30 relative overflow-hidden group hover:border-vanta-cyan hover:glow-cyan transition-all flex items-center justify-center p-4">
+                <div className="scanning-line" />
+                <div className="absolute inset-0 bg-vanta-green/20 mix-blend-color z-10 pointer-events-none group-hover:opacity-0 transition-opacity" />
+                <img src={vantaVaultLogo} alt="VantaVault Logo" className="w-full h-full object-contain filter grayscale contrast-125 opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all z-0" />
+              </motion.div>
+              <div className="text-center font-mono uppercase tracking-widest leading-tight">
+                <div className="text-vanta-cyan font-bold text-[10px] md:text-xs mb-1">VANTAVAULT</div>
+                <div className="text-vanta-green/50 text-[8px] md:text-[9px]">PILLAR 01 // PERSISTENCE</div>
+              </div>
+            </div>
+
+            {/* VantaAudit */}
+            <div className="flex flex-col items-center gap-4">
+              <motion.div whileHover={{ scale: 1.05 }} className="w-24 h-24 md:w-32 md:h-32 bg-black border border-vanta-green/30 relative overflow-hidden group hover:border-vanta-cyan hover:glow-cyan transition-all flex items-center justify-center p-4">
+                <div className="scanning-line" />
+                <div className="absolute inset-0 bg-vanta-green/20 mix-blend-color z-10 pointer-events-none group-hover:opacity-0 transition-opacity" />
+                <img src={vantaAuditLogo} alt="VantaAudit Logo" className="w-full h-full object-contain filter grayscale contrast-125 opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all z-0" />
+              </motion.div>
+              <div className="text-center font-mono uppercase tracking-widest leading-tight">
+                <div className="text-vanta-cyan font-bold text-[10px] md:text-xs mb-1">VANTAAUDIT</div>
+                <div className="text-vanta-green/50 text-[8px] md:text-[9px]">PILLAR 02 // TRUST</div>
+              </div>
+            </div>
+
+            {/* VantaGuard */}
+            <div className="flex flex-col items-center gap-4">
+              <motion.div whileHover={{ scale: 1.05 }} className="w-24 h-24 md:w-32 md:h-32 bg-black border border-vanta-green/30 relative overflow-hidden group hover:border-vanta-cyan hover:glow-cyan transition-all flex items-center justify-center p-4">
+                <div className="scanning-line" />
+                <div className="absolute inset-0 bg-vanta-green/20 mix-blend-color z-10 pointer-events-none group-hover:opacity-0 transition-opacity" />
+                <img src={vantaGuardLogo} alt="VantaGuard Logo" className="w-full h-full object-contain filter grayscale contrast-125 opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all z-0" />
+              </motion.div>
+              <div className="text-center font-mono uppercase tracking-widest leading-tight">
+                <div className="text-vanta-cyan font-bold text-[10px] md:text-xs mb-1">VANTAGUARD</div>
+                <div className="text-vanta-green/50 text-[8px] md:text-[9px]">PILLAR 03 // DEFENSE</div>
+              </div>
+            </div>
+
+            {/* VantaSweep */}
+            <div className="flex flex-col items-center gap-4">
+              <motion.div whileHover={{ scale: 1.05 }} className="w-24 h-24 md:w-32 md:h-32 bg-black border border-vanta-green/30 relative overflow-hidden group hover:border-vanta-cyan hover:glow-cyan transition-all flex items-center justify-center p-4">
+                <div className="scanning-line" />
+                <div className="absolute inset-0 bg-vanta-green/20 mix-blend-color z-10 pointer-events-none group-hover:opacity-0 transition-opacity" />
+                <img src={vantaSweepLogo} alt="VantaSweep Logo" className="w-full h-full object-contain filter grayscale contrast-125 opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all z-0" />
+              </motion.div>
+              <div className="text-center font-mono uppercase tracking-widest leading-tight">
+                <div className="text-vanta-cyan font-bold text-[10px] md:text-xs mb-1">VANTASWEEP</div>
+                <div className="text-vanta-green/50 text-[8px] md:text-[9px]">PILLAR 04 // HYGIENE</div>
+              </div>
+            </div>
+          </div>
+          <div className="text-center mt-6 text-[10px] font-mono text-vanta-green/40 mt-8 tracking-widest uppercase">
+            // ALL_SYSTEMS_VERIFIED
+          </div>
         </div>
       </section>
 

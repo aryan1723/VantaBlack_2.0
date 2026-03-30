@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { LayoutGrid, Route, BadgeCheck, ChevronRight } from 'lucide-react';
+import { LayoutGrid, Route, BadgeCheck, ChevronRight, Database, History, ShieldCheck, Eraser } from 'lucide-react';
 
 export default function AboutUs() {
   return (
@@ -96,31 +96,31 @@ export default function AboutUs() {
           </div>
         </section>
 
-        {/* SECTION 3: CORE_VALUES */}
+        {/* SECTION 3: CORE_VALUES / 4 PILLARS */}
         <section className="relative">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="md:col-span-2 bg-vanta-surface-high/40 p-6 md:p-10 relative clip-hud group hover:bg-vanta-surface-high/60 transition-all duration-300 border border-vanta-green/20">
               <div className="absolute top-4 right-4 text-vanta-green font-mono text-[10px] opacity-30 hidden sm:block">MATRIX_FOUNDATION</div>
               <LayoutGrid className="text-3xl md:text-4xl text-vanta-green mb-6" size={40} />
-              <h3 className="font-sans font-bold text-xl md:text-2xl text-white mb-4 uppercase">Core Execution Matrix</h3>
+              <h3 className="font-sans font-bold text-xl md:text-2xl text-white mb-4 uppercase">The Core Pillars Matrix</h3>
               <p className="text-vanta-green/60 font-mono text-sm leading-relaxed">
-                Vantablack is built upon a deterministic execution matrix. Unlike sharded protocols that trade security for speed, our Matrix ensures total state consistency. Every operation is transparent, mathematically absolute, and hardened against external extraction.
+                Vantablack is built upon a deterministic execution matrix powered by four uncompromising pillars: Vault, Audit, Guard, and Sweep. Together, they form an environment that combines post-quantum storage encapsulation, real-time threat triaging, kernel-level defense, and zero-trace data hygiene.
               </p>
             </div>
             <div className="bg-vanta-surface p-6 border-l-4 border-vanta-cyan relative">
               <Route className="text-2xl md:text-3xl text-vanta-cyan mb-4" size={32} />
-              <h3 className="font-sans font-bold text-lg md:text-xl text-white mb-2 uppercase">Linear Path</h3>
+              <h3 className="font-sans font-bold text-lg md:text-xl text-white mb-2 uppercase">Zero-Day Defense</h3>
               <p className="text-vanta-green/60 font-mono text-[10px] md:text-[11px] leading-tight">
-                Deterministic processing paths eliminate latency spikes and ensure predictable execution timeframes for high-stakes data.
+                VantaGuard and VantaAudit analyze rapid data entropy and file system events, neutralizing unauthorized encryption attempts in real-time.
               </p>
             </div>
             <div className="bg-vanta-surface-low p-6 relative flex flex-col justify-between border-t-4 border-vanta-green/20">
               <div>
                 <BadgeCheck className="text-2xl md:text-3xl text-vanta-green mb-4" size={32} />
-                <h3 className="font-sans font-bold text-lg md:text-xl text-white mb-2 uppercase">Immutable Log</h3>
+                <h3 className="font-sans font-bold text-lg md:text-xl text-white mb-2 uppercase">Continuous Trust</h3>
               </div>
               <p className="text-vanta-green/60 font-mono text-[10px] md:text-[11px] leading-tight">
-                Every execution event is recorded within the Monolith, providing an auditable trail of total integrity and zero-trust verification.
+                Every execution governed by VantaVault is mapped to an auditable trail, providing a unified threat score and total integrity mapping.
               </p>
             </div>
           </div>
