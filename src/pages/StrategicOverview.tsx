@@ -8,7 +8,7 @@ import vantaAuditLogo from '../assets/products/VantaAudit.png';
 import vantaGuardLogo from '../assets/products/VantaGuard.png';
 import vantaSweepLogo from '../assets/products/VantaSweep.png';
 const PillarCard = ({ pillar, title, subtitle, description, status, icon: Icon, githubUrl, exeUrl }: any) => (
-  <motion.div 
+  <motion.div
     whileHover={{ scale: 1.01 }}
     className="bg-vanta-surface border border-vanta-green/10 p-8 relative group hover:bg-vanta-surface-high transition-all clip-hud"
   >
@@ -24,17 +24,17 @@ const PillarCard = ({ pillar, title, subtitle, description, status, icon: Icon, 
       {description}
     </p>
     <div className="flex flex-wrap gap-3 mb-6">
-      <a 
-        href={githubUrl} 
-        target="_blank" 
+      <a
+        href={githubUrl}
+        target="_blank"
         rel="noopener noreferrer"
         className="bg-vanta-green/10 border border-vanta-green/40 text-vanta-green font-mono text-[10px] px-3 py-2 hover:bg-vanta-green hover:text-vanta-black transition-all glow-green uppercase tracking-widest flex items-center gap-2"
       >
         GITHUB_REPOSITORY
       </a>
-      <a 
-        href={exeUrl} 
-        target="_blank" 
+      <a
+        href={exeUrl}
+        target="_blank"
         rel="noopener noreferrer"
         className="bg-vanta-cyan/10 border border-vanta-cyan/40 text-vanta-cyan font-mono text-[10px] px-3 py-2 hover:bg-vanta-cyan hover:text-vanta-black transition-all glow-cyan uppercase tracking-widest flex items-center gap-2"
       >
@@ -70,7 +70,7 @@ export default function StrategicOverview() {
           <div className="lg:col-span-8">
             <div className="flex items-center gap-4 mb-4 text-vanta-green">
               <span className="h-px w-12 bg-vanta-green" />
-              <span className="text-[10px] md:text-xs font-mono tracking-[0.5em] uppercase">System_Link: Stable_2.0.4</span>
+              <span className="text-[10px] md:text-xs font-mono tracking-[0.5em] uppercase">System_Link: Stable_2.0.0</span>
             </div>
             <h1 className="text-4xl md:text-7xl font-black font-sans tracking-tighter text-white leading-none mb-6">
               VANTABLACK 2.0:<br />
@@ -86,25 +86,25 @@ export default function StrategicOverview() {
           </div>
           <div className="lg:col-span-4 flex flex-col items-center lg:items-end gap-2 text-center lg:text-right">
             <div className="text-[10px] font-mono text-vanta-green/40 leading-tight mb-4 lg:mb-0">
-              LAT: 40.7128° N<br />
-              LONG: 74.0060° W<br />
+              LAT: 48°04'02.0" N<br />
+              LONG: 12°51'49.0" E<br />
               SIGNAL: ENCRYPTED<br />
               VECTOR: ALPHA_9
             </div>
             <div className="w-full max-w-[300px] lg:max-w-none aspect-square bg-vanta-surface-high/20 relative border border-vanta-green/20 overflow-hidden clip-hud">
-              <motion.img 
-                animate={{ 
+              <motion.img
+                animate={{
                   scale: [1, 1.05, 1],
                   opacity: [0.7, 0.9, 0.7]
                 }}
-                transition={{ 
+                transition={{
                   duration: 8,
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                alt="Digital core visualization" 
-                className="w-full h-full object-cover group-hover:opacity-100 transition-opacity duration-700" 
-                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800&h=800" 
+                alt="Digital core visualization"
+                className="w-full h-full object-cover group-hover:opacity-100 transition-opacity duration-700"
+                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800&h=800"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-vanta-black via-transparent to-transparent opacity-60" />
@@ -126,7 +126,7 @@ export default function StrategicOverview() {
           <span className="text-[10px] font-mono text-vanta-green/40 uppercase tracking-widest">Protocol: 4_Pillars_Enabled</span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <PillarCard 
+          <PillarCard
             pillar="PILLAR_01"
             subtitle="PERSISTENCE"
             title="VantaVault"
@@ -136,7 +136,7 @@ export default function StrategicOverview() {
             githubUrl="https://github.com/aryan1723/VantaBlack"
             exeUrl="https://github.com/aryan1723/VantaBlack/releases"
           />
-          <PillarCard 
+          <PillarCard
             pillar="PILLAR_02"
             subtitle="TRUST"
             title="VantaAudit"
@@ -146,7 +146,7 @@ export default function StrategicOverview() {
             githubUrl="https://github.com/aryan1723/VantaAudit"
             exeUrl="https://github.com/aryan1723/VantaAudit/releases"
           />
-          <PillarCard 
+          <PillarCard
             pillar="PILLAR_03"
             subtitle="DEFENSE"
             title="VantaGuard"
@@ -156,7 +156,7 @@ export default function StrategicOverview() {
             githubUrl="https://github.com/aryan1723/VantaGuard"
             exeUrl="https://github.com/aryan1723/VantaGuard/releases"
           />
-          <PillarCard 
+          <PillarCard
             pillar="PILLAR_04"
             subtitle="HYGIENE"
             title="VantaSweep"
@@ -327,33 +327,33 @@ export default function StrategicOverview() {
             <div className="flex flex-col items-center lg:items-end text-center lg:text-right w-full lg:w-auto">
               <div className="text-[10px] md:text-xs font-mono text-vanta-green/40 mb-4 tracking-[0.3em] uppercase">RECRUITMENT_ACTIVE</div>
               <div className="grid grid-cols-2 sm:grid-cols-4 lg:flex lg:flex-wrap gap-3 md:gap-4 justify-center lg:justify-end w-full">
-                <a 
-                  href="https://github.com/aryan1723/VantaBlack" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/aryan1723/VantaBlack"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-transparent border-2 border-vanta-green text-vanta-green px-3 md:px-4 py-2 font-sans font-black text-[10px] md:text-xs hover:bg-vanta-green hover:text-vanta-black transition-all glow-green uppercase italic tracking-tighter text-center"
                 >
                   VANTA_VAULT
                 </a>
-                <a 
-                  href="https://github.com/aryan1723/VantaAudit" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/aryan1723/VantaAudit"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-transparent border-2 border-vanta-green text-vanta-green px-3 md:px-4 py-2 font-sans font-black text-[10px] md:text-xs hover:bg-vanta-green hover:text-vanta-black transition-all glow-green uppercase italic tracking-tighter text-center"
                 >
                   VANTA_AUDIT
                 </a>
-                <a 
-                  href="https://github.com/aryan1723/VantaGuard" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/aryan1723/VantaGuard"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-transparent border-2 border-vanta-green text-vanta-green px-3 md:px-4 py-2 font-sans font-black text-[10px] md:text-xs hover:bg-vanta-green hover:text-vanta-black transition-all glow-green uppercase italic tracking-tighter text-center"
                 >
                   VANTA_GUARD
                 </a>
-                <a 
-                  href="https://github.com/aryan1723/CleanSweep" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/aryan1723/CleanSweep"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-transparent border-2 border-vanta-green text-vanta-green px-3 md:px-4 py-2 font-sans font-black text-[10px] md:text-xs hover:bg-vanta-green hover:text-vanta-black transition-all glow-green uppercase italic tracking-tighter text-center"
                 >
