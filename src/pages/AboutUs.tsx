@@ -70,8 +70,6 @@ export default function AboutUs() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
               { id: 'ARCH_01', name: 'ARYAN', role: 'Architect', seed: 'tech1' },
-              { id: 'EXEC_LEAD', name: 'TUSHAR', role: 'Performance Lead', seed: 'tech2' },
-              { id: 'MATRIX_SPEC', name: 'MANNAT', role: 'Matrix Specialist', seed: 'tech3' },
             ].map((member) => (
               <div key={member.id} className="bg-vanta-surface relative group overflow-hidden border border-vanta-green/15 p-1">
                 <div className="bg-vanta-surface-low h-48 md:h-64 w-full relative overflow-hidden flex items-center justify-center">
